@@ -15,20 +15,23 @@
             <a href="https://www.youtube.com/@methodise" id="by_methodise" target="_blank">
                 <h3 id="by_methodise">By Methodise</h3>
             </a>
-            <hr id="hr">
+            <hr>
         </header>
         
-        <p id="text">Solve the problems <br> If you're correct, it'll automatically switch to a new one!</p>
+        <p>Solve the problems <br> If you're correct, it'll automatically switch to a new one!<br>Choose Question Type:</p>
+        <button id="addition" class="question_type">Addition</button>
+        <button id="multiplication" class="question_type">Multiplication</button>
+        <button id="both" class="question_type">Both</button>
         <div id="math_block">
             <p id="math">
                 <span id="equation">1 + 2 = </span>
-                <input type="number" id="input" inputmode="numeric" min="0" max="20">
+                <input type="number" id="input" inputmode="numeric">
             </p>
         </div>
-        <p id="text">Problems Solved: <span id="solved">0</span></p>
+        <p>Problems Solved: <span id="solved">0</span></p>
         <footer>
-            <hr id="hr">
-            <p id="text"> Version 0.1.1</p>
+            <hr>
+            <p> Version 0.2.0</p>
         </footer>
         <script src="script.js"></script>
     </body>
