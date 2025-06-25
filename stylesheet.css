@@ -1,20 +1,23 @@
 body {background-color:#314159}
-.rubik-moonrocks-regular {
+h1 {
   font-family: "Rubik Moonrocks", sans-serif;
   font-weight: 400;
   font-style: normal;
+  font-size: 50px;
+  text-align: center;
+  color:white
 }
-#title {font-size: 50px;text-align: center;color:white}
-#by_methodise {font-size: 20px;
+a {
+  font-size: 20px;
   color:white;
   text-align: center;
   font-family: 'Courier New', Courier, monospace;
   text-decoration: none;
 }
-#hr {color: white;height: 5px;background-color: white;}
-#text {color: white;font-size: 25px;}
-#start {width: 300px;height:50px;font-size: 40px;background-color: white;}
-#math {color: white;
+hr {color: white;height: 5px;background-color: white;}
+p {color: white;font-size: 25px;}
+#math {
+  color: white;
   font-size: 50px;
   background-color: #271828;
   padding: 25px;
@@ -22,12 +25,13 @@ body {background-color:#314159}
   border-radius: 30px;
   display: inline-block;
 }
-#math_block {text-align: center;}
-#input {font-size: 50px;
-        width:75px;
-        background-color: #314159;
-        color: white;
-        border: none;
-        outline: none;
-        border-radius: 10px;
+div {text-align: center;}
+input {
+  font-size: 50px;
+  width:75px;
+  background-color: #314159;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 10px;
 }

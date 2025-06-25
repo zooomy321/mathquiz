@@ -1,19 +1,19 @@
-let input = document.getElementById("input");
-let equation = document.getElementById("equation");
-let solved = document.getElementById("solved");
+const input = document.querySelector("input")
+const equation = document.getElementById("equation");
+const solved = document.getElementById("solved");
 
-let new_problem = function() {
-    let x = Math.floor(Math.random() * 10) + 1;
-    let y = Math.floor(Math.random() * 10) + 1;
+function new_problem() {
+    let x = Math.ceil(Math.random() * 10);
+    let y = Math.ceil(Math.random() * 10);
     equation.innerText = x + " + " + y + " = "
-    ans = x+y
+    let ans = x+y
     return ans
 }
 new_problem();
 input.addEventListener("input", () => {
-    if (Number(input.value) === ans) {
-        input.value = null
-        solved.innerText = Number(solved.innerText) + 1
-        new_problem()
+    if (input.value == ans) {
+        input.value = null;
+        solved.innerText = Number(solved.innerText) + 1;
+        new_problem();
     }
 })
