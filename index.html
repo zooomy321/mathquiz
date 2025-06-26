@@ -18,10 +18,16 @@
             <hr>
         </header>
         
-        <p>Solve the problems <br> If you're correct, it'll automatically switch to a new one!<br>Choose Question Type:</p>
-        <button id="addition" class="question_type">Addition</button>
-        <button id="multiplication" class="question_type">Multiplication</button>
-        <button id="both" class="question_type">Both</button>
+        <p>Solve the problems <br> If you're correct, it'll automatically switch to a new one!</p>
+        <div id="selection_div">
+            <p>Choose Type of Question:</p>
+            <button id="addition" class="question_type">Addition</button>
+            <button id="multiplication" class="question_type">Multiplication</button>
+            <button id="both" class="question_type">Both</button><br><br>
+            <button id="Start" class="question_type">Start</button>
+            <button id="Stop" class="question_type" remove>Stop</button>
+            <br><p>(Start/Stop Button Functionality will <br>be added in next update)</p>
+        </div>
         <div id="math_block">
             <p id="math">
                 <span id="equation">1 + 2 = </span>
@@ -31,7 +37,9 @@
         <p>Problems Solved: <span id="solved">0</span></p>
         <footer>
             <hr>
-            <p> Version 0.2.0</p>
+            <p><a href="https://discord.gg/TX4xwfRQZb" id="bug_report" target="_blank">Report Bugs</a></p>
+            <p> Version 0.2.1</p>
+            
         </footer>
         <script src="script.js"></script>
     </body>

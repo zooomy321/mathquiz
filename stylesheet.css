@@ -34,8 +34,31 @@ hr {color: white;height: 5px;background-color: white;}
     background-color: #271828;
     padding: 10px;
     color: white;
+    border-color: #125992;
+    border-radius: 10px;
     border: none;
     outline: none;
-    border-radius: 10px;
     display: inline-block;
+}
+#selection_div {
+  padding-top: 10px;
+  padding: 15px;
+  background-color: #125992;
+  border-radius: 10px;
+  border-width: 10px;
+  
+  display: inline-block;
+}
+#Start {
+  background-color:green;
+  border: none;
+  outline: none;
+}
+#Stop {background-color:red;
+      border: none;
+      outline: none;
+    }
+#bug_report {
+  color:white;
+
 }
