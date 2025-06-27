@@ -2,21 +2,24 @@ const input = document.getElementById("input");
 const equation = document.getElementById("equation");
 const solved = document.getElementById("solved");
 const addition_button = document.getElementById("addition");
+const subtraction_button = document.getElementById("subtraction");
 const multiplication_button = document.getElementById("multiplication");
-const both_button = document.getElementById("both");
+const division_button = document.getElementById("division");
 const start_button = document.getElementById("Start");
 const stop_button = document.getElementById("Stop");
 const time = document.getElementById("time");
 const cannot_change_qns_type_msg = document.getElementById("cannot_change_qns_type_msg");
 const average = document.getElementById("average");
 stop_button.style.display = 'none'
-let buttons = [addition_button,multiplication_button,both_button]
+let buttons = [addition_button,subtraction_button,multiplication_button,division_button]
 let ans
 let x
 let y
 let stop_value = false
-let question_type = -1
+let question_type = [-1]
 let start_pressed = false
+
+
 function addition() {
     x = Math.ceil(Math.random() * 100);
     y = Math.ceil(Math.random() * 100);
@@ -25,37 +28,57 @@ function addition() {
     return ans
 }
 function multiplication() {
-    x = Math.ceil(Math.random() * 10);
-    y = Math.ceil(Math.random() * 10);
+    x = Math.ceil(Math.random() * 12);
+    y = Math.ceil(Math.random() * 12);
     equation.innerText = x + " × " + y + " = "
     ans = x*y
     return ans
 }
-function new_problem() {
-    if (question_type === 0) {
-        addition()
-    } else if (question_type === 1) {
-        multiplication()
-    } else if (question_type === 2) {
-        if (Math.random() > 0.5) {
-            addition()
-        } else {
-            multiplication()
+function subtraction() {
+    x = Math.ceil(Math.random() * 100);
+    y = Math.ceil(Math.random() * 100);
+    equation.innerText = x + " - " + y + " = "
+    ans = x-y
+    return ans
+}
+function division() {
+    x = Math.ceil(Math.random() * 144);
+    let factors = [];
+    let z = 1;
+    while (z != x) {
+        if (x % z == 0) {
+            factors.push(z);
+            
         }
+        z++
     }
+    let index = Math.floor(Math.random()*factors.length);
+    y = factors[index];
+    equation.innerText = x + " ÷ " + y + " = ";
+    ans = x / y;
+    return ans;
+}
+
+
+function new_problem() {
+    
 }
 buttons.forEach(element => {
     element.addEventListener("click", () => {
+        if (question_type == [-1]) {
+            equation.innerText = "Press Start!";
+            return
+        }
         if (stop_button.style.display == 'none') {
-        question_type = buttons.indexOf(element)
-        buttons.forEach(button => {
-            if (button === element) {
-                button.style.backgroundColor = "green"
-            } else {
-                button.style.backgroundColor = "#271828"
-            }
-        })} else {
-            buttons_pressed_during_practice();
+            question_type.push(buttons.indexOf(element))
+            console.log(question_type)
+            buttons.forEach(button => {
+                if (buttons.indexOf(button) in question_type) {  
+                    button.style.backgroundColor = "green"
+                } else {
+                    button.style.backgroundColor = "#271828"
+                }
+            })
         }
     })
 });
