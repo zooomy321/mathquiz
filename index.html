@@ -7,7 +7,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap" rel="stylesheet">
-        <title>Math Quiz</title>
+        <title>Math Practice</title>
     </head>
     <body>
         <header>
@@ -26,19 +26,21 @@
             <button id="both" class="question_type">Both</button><br><br>
             <button id="Start" class="question_type">Start</button>
             <button id="Stop" class="question_type" remove>Stop</button>
-            <br><p>(Start/Stop Button Functionality will <br>be added in next update)</p>
+            <p id="cannot_change_qns_type_msg"></p>
         </div>
         <div id="math_block">
             <p id="math">
-                <span id="equation">1 + 2 = </span>
-                <input type="number" id="input" inputmode="numeric">
+                <span id="equation">Press Start!</span>
+                <input type="number" id="input" inputmode="numeric" style="display: none">
             </p>
         </div>
         <p>Problems Solved: <span id="solved">0</span></p>
+        <p>Time: <span id="time">0</span></p>
+        <p>Average Time Per Problem: <span id="average">0</span></p>
         <footer>
             <hr>
             <p><a href="https://discord.gg/TX4xwfRQZb" id="bug_report" target="_blank">Report Bugs</a></p>
-            <p> Version 0.2.1</p>
+            <p> Version 0.2.2</p>
             
         </footer>
         <script src="script.js"></script>
